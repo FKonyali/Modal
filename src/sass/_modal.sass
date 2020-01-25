@@ -1,0 +1,165 @@
+.modal
+    background: rgba(0,0,0,.6)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: 0
+    visibility: hidden
+    transition: all 300ms
+    $self: &
+
+    &.is-active
+        opacity: 1
+        visibility: visible
+        transition: all 300ms
+        transition-delay: 300ms
+
+        #{$self}__container
+            opacity: 1
+            visibility: visible
+            transition: all 300ms
+
+    &__container
+        width: 1400px
+        max-width: 100%
+        display: flex
+        align-items: flex-end
+        opacity: 0
+        visibility: hidden
+        transition: all 300ms
+
+    &__inner
+        background: #FFF
+        border-radius: 5px
+        display: flex
+        max-height: 560px
+        flex: 1
+        box-shadow: 0px 5px 7px 0px rgba(0,0,0,.2)
+    
+    &__product
+        overflow-y: scroll
+        padding: 15px
+        color: #151515
+
+    &__pimg
+        margin-bottom: 15px
+        
+    &__ptitle
+        font-size: 26px
+        font-weight: 700
+        margin-bottom: 15px
+
+    &__pcal
+        font-size: 12px
+        color: #666
+        margin-bottom: 20px
+
+    &__pprice
+        font-size: 34px
+        color: #900000
+        margin-bottom: 20px
+        font-weight: 700
+
+    &__pdesc
+        font-size: 15px
+        line-height: 20px
+
+        p
+            margin-bottom: 15px
+
+            &:last-child
+                margin-bottom: 0
+
+    &__detail
+        position: relative
+
+    &__dcontainer
+        overflow-y: scroll
+        height: 100%
+        padding-bottom: 90px
+
+    &__dtop
+        padding: 20px
+        display: flex
+        justify-content: space-between
+        background: #f5f5f5
+
+    &__tflex
+        display: flex
+        align-items: center
+        margin-bottom: 5px
+
+    &__ttitle
+        font-size: 20px
+        font-weight: 700
+        margin-right: 15px
+
+    &__tselectcount
+        text-transform: uppercase
+        font-size: 15px
+        font-weight: 600
+        color: #666
+
+    &__tinfo
+        color: #900000
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: 700
+
+    &__dselectable
+        border-top: 2px solid #dadada
+
+    &__select
+        display: flex
+        justify-content: space-between
+        padding: 20px
+        font-weight: 500
+
+    &__dprice
+        font-size: 15px
+
+    &__dcal
+        font-size: 12px
+
+    &__sfixed
+        position: absolute
+        left: 0
+        bottom: 0
+        width: calc(100% - 16px)
+        background: #FFF
+        display: flex
+        align-items: center
+        padding: 20px
+        border-top: 2px solid #dadada
+
+        .countinput
+            margin-right: 25px
+
+    &__sfixbtn
+        border-radius: 3px
+        padding: 15px 20px
+        width: 100%
+        flex: 1
+        text-transform: uppercase
+        font-weight: 600
+
+    &__close
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        background: #FFF
+        color: #333
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        margin-left: 15px
+        box-shadow: 0px 5px 7px 0px rgba(0,0,0,.2)
+
+        i
+            font-size: 30px
